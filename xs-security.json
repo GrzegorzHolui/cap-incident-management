@@ -1,0 +1,19 @@
+{
+  "xsappname": "incident-management-app",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.support",
+      "description": "Support role"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "support",
+      "description": "Support user",
+      "scope-references": [
+        "$XSAPPNAME.support"
+      ]
+    }
+  ]
+}
