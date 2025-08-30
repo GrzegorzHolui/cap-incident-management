@@ -1,19 +1,31 @@
 {
-  "xsappname": "incident-management-app",
-  "tenant-mode": "dedicated",
   "scopes": [
     {
       "name": "$XSAPPNAME.support",
-      "description": "Support role"
+      "description": "support"
+    },
+    {
+      "name": "$XSAPPNAME.admin",
+      "description": "admin"
     }
   ],
+  "attributes": [],
   "role-templates": [
     {
       "name": "support",
-      "description": "Support user",
+      "description": "generated",
       "scope-references": [
         "$XSAPPNAME.support"
-      ]
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "admin",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.admin"
+      ],
+      "attribute-references": []
     }
   ]
 }
