@@ -9,8 +9,11 @@ build-parameters:
   before-all:
     - builder: custom
       commands:
+        - npm config set fetch-retry-maxtimeout 600000
+        - npm config set fetch-retry-mintimeout 10000
+        - npm config set fetch-retries 5
         - npm ci
-        - npx cds build --production  
+        - npx cds build --production
 modules:
   - name: incident-management-srv
     type: nodejs
@@ -60,10 +63,12 @@ modules:
       build-result: dist
       builder: custom
       commands:
+        - npm config set fetch-retry-maxtimeout 600000
+        - npm config set fetch-retry-mintimeout 10000
+        - npm config set fetch-retries 5
         - npm ci
         - npm run build
-      supported-platforms:
-        []
+      supported-platforms: []
 
   - name: incident-management-destinations
     type: com.sap.application.content
