@@ -6,7 +6,8 @@
     "i18n": {
       "bundleUrl": "i18n/i18n.properties",
       "supportedLocales": [
-        ""
+        "",
+        "en"
       ]
     },
     "applicationVersion": {
@@ -80,7 +81,8 @@
           "bundleName": "ns.incidents.i18n.i18n",
           "supportedLocales": [
             ""
-          ]
+          ],
+          "fallbackLocale": ""
         }
       },
       "": {
@@ -97,7 +99,8 @@
         "uri": "i18n/i18n.properties",
         "settings": {
           "supportedLocales": [
-            ""
+            "",
+            "en"
           ]
         }
       }
